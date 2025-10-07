@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <title>портфолиё</title>
+    <head>
+    
+    <style>
+      html, body {
+       margin: 0;
+      }
+
+      .block {
+        position: relative;
+       height: 100vh;
+      }
+
+      .block2 {
+       display: grid;
+       place-items: center;
+       gap: 6%;
+      }
+
+      #privyu {
+        position: fixed; inset: 0;
+        background-color: rgba(0,0,0,0.7);
+        display: grid;
+        z-index: 100;
+      }
+
+      p {
+        font-size: 4vh;
+      }
+
+      h1 {
+        font-size: 6vh;
+      }
+
+      #ggh {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .photo {
+        width: 60vw;
+        height: 65vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      #photo1 {
+        background-image: url("assets/image/igra-1.png");
+      }
+
+      #photo2 {
+        background-image: url("assets/image/igra2.png");
+      }
+
+      .btn {
+        font-weight: bold;
+        cursor: pointer;
+        width: 12vw; 
+        height: 6vh; 
+        font-size: 1.2vw;
+        background-color: #0066cc; 
+        color: white;
+        border-radius: 999px;
+        border: none;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .btn:hover {
+        background-color: #004999; 
+        transform: scale(1.05); 
+      }
+    </style>
+    </head>
+    <body>
+    <div id="privyu">
+    </div>
+    <section class="block">
+     <div class="block2">
+       <h1>приветсвую в моём портфолиё</h1>
+       <p>Я начинающий программист. Надеюсь, смогу хоть немного заинтересовать.</p>
+     </div> 
+     <div id="ggh">
+       <p> Версия портфолио - 0.1.</p>
+     </div>
+    </section>
+
+    <section class="block">
+      <div class="block2">
+       <h1>проекты(готовые, и не готовые)</h1>
+       <h2>1) Trail of Choices</p>
+       <div class="photo" id="photo1"></div>
+       <a href="https://arturvaip.github.io/final-project/" target="_blank"><button class="btn">перейти</button></a>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="block2">
+       <h1>проекты(готовые, и не готовые)</h1>
+       <h2>2) путиводитель по сезонам лололошки</p>
+       <div class="photo" id="photo2"></div>
+       <a href="https://arturvaip.github.io/lololoshka/w" target="_blank"><button class="btn">перейти</button></a>
+      </div>
+    </section>
+    </body>
+    <script>
+      const privyu = document.getElementById('privyu');
+
+        if(document.readyState === 'complete') {
+         privyu.style.display = "none"
+        } else {
+          window.addEventListener('load', () => {
+            privyu.style.display = "none";
+          }, { once: true })
+          
+        }
+    </script>    
+</html>    
